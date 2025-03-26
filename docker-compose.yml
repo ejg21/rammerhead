@@ -1,0 +1,7 @@
+version: '3'
+services:
+      web:
+              image: unblock_v1
+              build: .
+              ports:
+                      - "8088:8080"
