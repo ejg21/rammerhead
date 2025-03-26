@@ -13,8 +13,11 @@ RUN npm install
 # Copy the rest of the application
 COPY . .
 
-# Expose the port
+# Build the project
+RUN npm run build
+
+# Expose the required port
 EXPOSE 8080
 
-# Start the Rammerhead proxy
-CMD ["node", "server.js"]
+# Start Rammerhead
+CMD ["node", "src/server.js"]
